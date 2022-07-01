@@ -6,13 +6,13 @@ const ExpensesFilter = (props) => {
 
   const handleSelectDate =(event) => {
     props.onSelectingFilter(event.target.value)
-  }
+  };
 
   return (
     <div className='expenses-filter'>
       <div className='expenses-filter__control'>
         <label>Filter by year</label>
-        <select onChange={handleSelectDate}>
+        <select value={props.selected} onChange={handleSelectDate}>
           <option value='2022'>2022</option>
           <option value='2021'>2021</option>
           <option value='2020'>2020</option>
